@@ -139,7 +139,7 @@
 <a href="#" style="margin-right: -13px; margin-bottom: 41px" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 <!-- JavaScript Libraries -->
-@livewireScripts
+
 <script>
     window.replainSettings = { id: '85cb7642-0cb2-4e6e-8606-dfc860c1f945' };
     (function(u){var s=document.createElement('script');s.async=true;s.src=u;
@@ -159,6 +159,7 @@
 
 <!-- Template Javascript -->
 <script src="js/main.js"></script>
+@livewireScripts
 </body>
 
 </html>

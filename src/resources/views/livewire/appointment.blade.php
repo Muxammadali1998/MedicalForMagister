@@ -1,5 +1,5 @@
-<!-- Appointment Start -->
-<div class="container-xxl py-5">
+<div class="container-xxl py-5"  >
+    <button   > test liveware</button>
     <div class="container">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -44,18 +44,18 @@
                             </div>
                             <div class="col-12 col-sm-6">
                                 <select class="form-select border-0" style="height: 55px;">
-                                    <option selected>Bo'limni tanlang</option>
-                                    <option value="1">Otorinolaringologiya</option>
-                                    <option value="2">Neyrosonografiya</option>
-                                    <option value="3">Nefrologiya</option>
+                                    @foreach($services as $service)
+                                        <option value="{{$service->is}}">{{$service['title_'.app()->getLocale()]}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="col-12 col-sm-6">
-                                <select name="doctor_id" required class="form-select border-0" style="height: 55px;">
-                                    <option selected> Doctorni Tanlan</option>
-                                    <option value="1">Usmonov Rustam Alisherovich</option>
-                                    <option value="2">Masalieva Dilfuza Ismataliyevna</option>
-                                    <option value="3">Kim Dmitriy Olegovich</option>
+                                <select name="doctor_id" required class="form-select border-0" style="height: 55px;" >
+                                    @foreach($doctors as $doctor)
+                                        <option value="{{$doctor->is}}">{{$doctor['title_'.app()->getLocale()]}}</option>
+                                    @endforeach
+
+
                                 </select>
                             </div>
                             <div class="col-12 col-sm-6">
@@ -85,5 +85,4 @@
         </div>
     </div>
 </div>
-<!-- Appointment End -->
 
