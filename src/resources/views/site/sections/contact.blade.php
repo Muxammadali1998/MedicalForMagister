@@ -40,29 +40,30 @@
                     <p class="d-inline-block border rounded-pill py-1 px-4">Biz bilan Bog'lanish</p>
                     <h1 class="mb-4">Har qanday so'rov bormi? Biz bilan bog'laning!</h1>
                     <p class="mb-4">Kontakt formasi hozirda faol emas. Bir necha daqiqada Ajax va PHP bilan funktsional va ishlaydigan aloqa formasini oling. Faqat fayllardan nusxa ko'chiring va joylashtiring, ozgina kod qo'shing va ish tugadi.</p>
-                    <form>
+                    <form action="{{route('message')}}" method="POST">
+                        @csrf
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder=" Ism">
+                                    <input required type="text" name="name" class="form-control" id="name" placeholder=" Ism">
                                     <label for="name"> Ism</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Email">
+                                    <input required type="email" name="email" class="form-control" id="email" placeholder="Email">
                                     <label for="email"> Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Mavzu">
-                                    <label for="subject">Mavzu</label>
+                                    <input required type="text" name="phone" class="form-control" id="subject" placeholder="+123456789">
+                                    <label for="subject">Tel Number</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Sizning xabaringiz" id="message" style="height: 100px"></textarea>
+                                    <textarea required name="message" class="form-control" placeholder="Sizning xabaringiz" id="message" style="height: 100px"></textarea>
                                     <label for="message">Xabar</label>
                                 </div>
                             </div>

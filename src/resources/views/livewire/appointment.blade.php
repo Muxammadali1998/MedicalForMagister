@@ -28,18 +28,19 @@
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="bg-light rounded h-100 d-flex align-items-center p-5">
                     <form action="{{route('patient')}}" method="POST">
+                        @csrf
                         <div class="row g-3">
                             <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control border-0" placeholder="Ism" style="height: 55px;">
+                                <input  required type="text" name="name" class="form-control border-0" placeholder="Ism" style="height: 55px;">
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control border-0" placeholder="Familya" style="height: 55px;">
+                                <input  required type="text" name="surname" class="form-control border-0" placeholder="Familya" style="height: 55px;">
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="email" class="form-control border-0" placeholder=" Elektron pochta" style="height: 55px;">
+                                <input  required type="email" name="email" class="form-control border-0" placeholder=" Elektron pochta" style="height: 55px;">
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control border-0" placeholder="Telefon raqami" style="height: 55px;">
+                                <input  required type="text" name="phone" class="form-control border-0" placeholder="Telefon raqami" style="height: 55px;">
                             </div>
                             <div class="col-12 col-sm-6">
                                 <select class="form-select border-0" style="height: 55px;">
@@ -50,7 +51,7 @@
                                 </select>
                             </div>
                             <div class="col-12 col-sm-6">
-                                <select class="form-select border-0" style="height: 55px;">
+                                <select name="doctor_id" required class="form-select border-0" style="height: 55px;">
                                     <option selected> Doctorni Tanlan</option>
                                     <option value="1">Usmonov Rustam Alisherovich</option>
                                     <option value="2">Masalieva Dilfuza Ismataliyevna</option>
@@ -59,20 +60,20 @@
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="date" id="date" data-target-input="nearest">
-                                    <input type="text"
+                                    <input  name="date" required type="text"
                                            class="form-control border-0 datetimepicker-input"
                                            placeholder="Kunni Tanlang" data-target="#date" data-toggle="datetimepicker" style="height: 55px;">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="time" id="time" data-target-input="nearest">
-                                    <input type="text"
+                                    <input name="time"  required type="text"
                                            class="form-control border-0 datetimepicker-input"
                                            placeholder="Vaqni tanlang" data-target="#time" data-toggle="datetimepicker" style="height: 55px;">
                                 </div>
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control border-0" rows="5" placeholder="Xabar qoldirish"></textarea>
+                                <textarea required name="description" class="form-control border-0" rows="5" placeholder="Xabar qoldirish"></textarea>
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 py-3" type="submit">Ma'lumotni saqlash</button>

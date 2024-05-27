@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,13 @@ Route::name('site.')->group(function () {
     Route::get('/appointment',[PagesController::class, 'appointment'])->name('appointment');
     Route::get('/doctor',[PagesController::class, 'doctor'])->name('doctor');
 });
+
+Route::post('patient',[ClientController::class, 'patient'])->name('patient');
+Route::post('message',[ClientController::class, 'message'])->name('message');
+Route::get('/phpinfo', function() {
+    return phpinfo();
+});
+
 
 
 Route::group(['prefix' => 'admin'], function () {

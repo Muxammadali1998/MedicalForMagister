@@ -9,8 +9,8 @@ services:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
       - ./src:/var/www/laravel
     depends_on:
-      - mysql
       - php
+      - mysql
   php:
     build:
       context: dockerfiles

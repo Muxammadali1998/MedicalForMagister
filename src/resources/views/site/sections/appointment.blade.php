@@ -1,1 +1,1 @@
-<livewire:appointment></livewire:appointment>
+<livewire:appointment />

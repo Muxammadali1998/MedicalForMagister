@@ -10,11 +10,12 @@ return new class extends Migration {
         Schema::create('patients', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('surname');
             $table->string('email');
             $table->string('phone');
             $table->foreignId('doctor_id')->constrained('doctors');
-            $table->date('date');
-            $table->time('time');
+            $table->string('date');
+            $table->string('time');
             $table->text('description');
             $table->timestamps();
         });
