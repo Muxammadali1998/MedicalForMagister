@@ -12,7 +12,7 @@ class Appointment extends Component
     public function __construct()
     {
         $this->services = Job::with('doctors')->get();
-        $this->doctors = [];
+        $this->doctors = $this->services->first()->doctors ?? [];
     }
 
     public function render()
@@ -20,7 +20,7 @@ class Appointment extends Component
         return view('livewire.appointment');
     }
 
-    public function test(){
-        dd(45);
+    public function addDoctors($id){
+        $this->doctors = $this->services->where('id',$id)->first()->doctors;
     }
 }

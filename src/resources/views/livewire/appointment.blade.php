@@ -1,17 +1,16 @@
 <div class="container-xxl py-5"  >
-    <button   > test liveware</button>
     <div class="container">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <p class="d-inline-block border rounded-pill py-1 px-4">Qbul</p>
-                <h1 class="mb-4">Bizning shifokorga tashrif buyurish uchun vaqt yozing</h1>
-                <p class="mb-4">Jadvaldan o'z malumotlaringizni kiritin va ozingizga kerakli yonalishni tanlang . Keyingi royhatdan Shifokor va qabul uchun qulay vaqni kiriting.</p>
+                <h1 class="mb-4">{{__('words.navbat_oling')}}</h1>
+                <p class="mb-4">{{__('words.qabul_body')}}</p>
                 <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
                         <i class="fa fa-phone-alt text-primary"></i>
                     </div>
                     <div class="ms-4">
-                        <p class="mb-2">Hoziroq qongiroq qling</p>
+                        <p class="mb-2">{{__('words.call_now')}}</p>
                         <h5 class="mb-0">+123456789</h5>
                     </div>
                 </div>
@@ -20,7 +19,7 @@
                         <i class="fa fa-envelope-open text-primary"></i>
                     </div>
                     <div class="ms-4">
-                        <p class="mb-2">Email orqali murojat</p>
+                        <p class="mb-2">{{__('words.write_email')}}</p>
                         <h5 class="mb-0">info@example.com</h5>
                     </div>
                 </div>
@@ -45,14 +44,14 @@
                             <div class="col-12 col-sm-6">
                                 <select class="form-select border-0" style="height: 55px;">
                                     @foreach($services as $service)
-                                        <option value="{{$service->is}}">{{$service['title_'.app()->getLocale()]}}</option>
+                                        <option wire:click="addDoctors({{$service->id}})" value="{{$service->id}}">{{$service['title_'.app()->getLocale()]}}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <select name="doctor_id" required class="form-select border-0" style="height: 55px;" >
                                     @foreach($doctors as $doctor)
-                                        <option value="{{$doctor->is}}">{{$doctor['title_'.app()->getLocale()]}}</option>
+                                        <option value="{{$doctor->id}}">{{$doctor['name_'.app()->getLocale()]}}</option>
                                     @endforeach
 
 

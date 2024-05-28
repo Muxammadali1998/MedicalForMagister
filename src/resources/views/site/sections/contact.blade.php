@@ -8,7 +8,7 @@
                         <i class="fa fa-map-marker-alt text-primary"></i>
                     </div>
                     <div class="ms-4">
-                        <p class="mb-2">Manzil</p>
+                        <p class="mb-2">{{__('words.address')}}</p>
                         <h5 class="mb-0">Fargona , Quva , Begat 48</h5>
                     </div>
                 </div>
@@ -19,7 +19,7 @@
                         <i class="fa fa-phone-alt text-primary"></i>
                     </div>
                     <div class="ms-4">
-                        <p class="mb-2">Telefon raqami</p>
+                        <p class="mb-2">{{__('words.phone')}}</p>
                         <h5 class="mb-0">+998 55 789 6789</h5>
                     </div>
                 </div>
@@ -30,45 +30,45 @@
                         <i class="fa fa-envelope-open text-primary"></i>
                     </div>
                     <div class="ms-4">
-                        <p class="mb-2">Email</p>
+                        <p class="mb-2">{{__('words.email')}}</p>
                         <h5 class="mb-0">info@example.com</h5>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                 <div class="bg-light rounded p-5">
-                    <p class="d-inline-block border rounded-pill py-1 px-4">Biz bilan Bog'lanish</p>
-                    <h1 class="mb-4">Har qanday so'rov bormi? Biz bilan bog'laning!</h1>
-                    <p class="mb-4">Kontakt formasi hozirda faol emas. Bir necha daqiqada Ajax va PHP bilan funktsional va ishlaydigan aloqa formasini oling. Faqat fayllardan nusxa ko'chiring va joylashtiring, ozgina kod qo'shing va ish tugadi.</p>
+                    <p class="d-inline-block border rounded-pill py-1 px-4">{{__('words.contTitle')}}</p>
+                    <h1 class="mb-4">{{__('words.contSubTItle')}}</h1>
+                    <p class="mb-4">{{__('words.contBody')}}</p>
                     <form action="{{route('message')}}" method="POST">
                         @csrf
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input required type="text" name="name" class="form-control" id="name" placeholder=" Ism">
-                                    <label for="name"> Ism</label>
+                                    <label for="name"> {{__('words.name')}}</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input required type="email" name="email" class="form-control" id="email" placeholder="Email">
-                                    <label for="email"> Email</label>
+                                    <label for="email"> {{__('words.email')}}</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
                                     <input required type="text" name="phone" class="form-control" id="subject" placeholder="+123456789">
-                                    <label for="subject">Tel Number</label>
+                                    <label for="subject">{{__('words.phone')}}</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
                                     <textarea required name="message" class="form-control" placeholder="Sizning xabaringiz" id="message" style="height: 100px"></textarea>
-                                    <label for="message">Xabar</label>
+                                    <label for="message">{{__('words.message')}}</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Xabarni jo'natish</button>
+                                <button class="btn btn-primary w-100 py-3" type="submit">{{__('words.send')}}</button>
                             </div>
                         </div>
                     </form>

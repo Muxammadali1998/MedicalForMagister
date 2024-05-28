@@ -47,7 +47,7 @@
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
     <a href="{{route('site.home')}}" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-        <h1 class="m-0 text-primary"><i class="far fa-hospital me-3"></i>Klinik</h1>
+        <h1 class="m-0 text-primary"><i class="far fa-hospital me-3"></i>Omad Shifo</h1>
     </a>
     <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
@@ -61,15 +61,14 @@
                     <a href="#" class="dropdown-item">Ru</a>
                 </div>
             </div>
-            <a href="{{route('site.home')}}" class="nav-item nav-link {{request()->routeIs('site.home')?"active":''}}">Bosh sahifa</a>
-            <a href="{{route('site.about')}}" class="nav-item nav-link {{request()->routeIs('site.about')?"active":''}}">Biz haqimizda</a>
-            <a href="{{route('site.service')}}" class="nav-item nav-link {{request()->routeIs('site.service')?"active":''}}">Xizmatlar</a>
-            <a href="{{route('site.feature')}}" class="nav-item nav-link {{request()->routeIs('site.feature')?"active":''}}">Afzallaiklar</a>
-            <a href="{{route('site.doctor')}}" class="nav-item nav-link {{request()->routeIs('site.doctor')?"active":''}}">Bizning Doctorlar</a>
-            <a href="{{route('site.appointment')}}" class="nav-item nav-link {{request()->routeIs('site.appointment')?"active":''}}">Qabul</a>
-            <a href="{{route('site.contact')}}" class="nav-item nav-link {{request()->routeIs('site.contact')?"active":''}}">Aloqa</a>
+            <a href="{{route('site.home')}}" class="nav-item nav-link {{request()->routeIs('site.home')?"active":''}}">{{__('words.home')}}</a>
+            <a href="{{route('site.about')}}" class="nav-item nav-link {{request()->routeIs('site.about')?"active":''}}">{{__('words.about')}}</a>
+            <a href="{{route('site.service')}}" class="nav-item nav-link {{request()->routeIs('site.service')?"active":''}}">{{__('words.services')}}</a>
+            <a href="{{route('site.feature')}}" class="nav-item nav-link {{request()->routeIs('site.feature')?"active":''}}">{{__('words.features')}}</a>
+            <a href="{{route('site.doctor')}}" class="nav-item nav-link {{request()->routeIs('site.doctor')?"active":''}}">{{__('words.doctors')}}</a>
+            <a href="{{route('site.appointment')}}" class="nav-item nav-link {{request()->routeIs('site.appointment')?"active":''}}">{{__('words.appointment')}}</a>
+            <a href="{{route('site.contact')}}" class="nav-item nav-link {{request()->routeIs('site.contact')?"active":''}}">{{__('words.contact')}}</a>
         </div>
-{{--        <a href="" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Appointment<i class="fa fa-arrow-right ms-3"></i></a>--}}
     </div>
 </nav>
 <!-- Navbar End -->
@@ -81,7 +80,7 @@
     <div class="container py-5">
         <div class="row g-5">
             <div class="col-lg-3 col-md-6">
-                <h5 class="text-light mb-4">Address</h5>
+                <h5 class="text-light mb-4">{{__('words.address')}}</h5>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
                 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
                 <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
@@ -93,29 +92,33 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <h5 class="text-light mb-4">Services</h5>
-                <a class="btn btn-link" href="">Cardiology</a>
-                <a class="btn btn-link" href="">Pulmonary</a>
-                <a class="btn btn-link" href="">Neurology</a>
-                <a class="btn btn-link" href="">Orthopedics</a>
-                <a class="btn btn-link" href="">Laboratory</a>
+                <h5 class="text-light mb-4">{{__('words.services')}}</h5>
+
+                @foreach($jobs as $service)
+                    <a class="btn btn-link" href="">{{$service['title_'.app()->getLocale()]}}</a>
+                @endforeach
+
             </div>
             <div class="col-lg-3 col-md-6">
-                <h5 class="text-light mb-4">Quick Links</h5>
-                <a class="btn btn-link" href="">About Us</a>
-                <a class="btn btn-link" href="">Contact Us</a>
-                <a class="btn btn-link" href="">Our Services</a>
-                <a class="btn btn-link" href="">Terms & Condition</a>
-                <a class="btn btn-link" href="">Support</a>
+                <h5 class="text-light mb-4">{{__('words.quick_links')}}</h5>
+
+                <a href="{{route('site.home')}}"class="btn btn-link">{{__('words.home')}}</a>
+                <a href="{{route('site.about')}}"class="btn btn-link">{{__('words.about')}}</a>
+                <a href="{{route('site.service')}}"class="btn btn-link">{{__('words.services')}}</a>
+                <a href="{{route('site.feature')}}"class="btn btn-link">{{__('words.features')}}</a>
+                <a href="{{route('site.doctor')}}"class="btn btn-link">{{__('words.doctors')}}</a>
+                <a href="{{route('site.appointment')}}"class="btn btn-link">{{__('words.appointment')}}</a>
+                <a href="{{route('site.contact')}}"class="btn btn-link">{{__('words.contact')}}</a>
+
             </div>
-            <div class="col-lg-3 col-md-6">
-                <h5 class="text-light mb-4">Newsletter</h5>
-                <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                <div class="position-relative mx-auto" style="max-width: 400px;">
-                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                </div>
-            </div>
+{{--            <div class="col-lg-3 col-md-6">--}}
+{{--                <h5 class="text-light mb-4">Newsletter</h5>--}}
+{{--                <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>--}}
+{{--                <div class="position-relative mx-auto" style="max-width: 400px;">--}}
+{{--                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">--}}
+{{--                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
     </div>
     <div class="container">

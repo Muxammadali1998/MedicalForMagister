@@ -5,9 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28f8f509-6c7e-4adb-ad21-23dfdaa4a66c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/laravel-app-dockerized.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-app-dockerized.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lang/uz/words.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MedicalForMagister.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MedicalForMagister.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/PagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Livewire/Appointment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Livewire/Appointment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/components/layouts/app.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/layout/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layout/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/livewire/appointment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/livewire/appointment.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/site/sections/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/site/sections/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/site/sections/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/site/sections/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/site/sections/feature.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/site/sections/feature.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/site/sections/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/site/sections/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/site/sections/pageHeader.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/site/sections/pageHeader.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/site/sections/service.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/site/sections/service.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/site/sections/team.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/site/sections/team.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/site/sections/testimonial.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/site/sections/testimonial.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +42,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="D:\OSPanel\modules\php\PHP_8.1\php.exe">
     <include_path>
       <path value="$PROJECT_DIR$/src/vendor/spatie/backtrace" />
@@ -175,6 +191,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -208,10 +225,26 @@
       <workItem from="1716441063235" duration="831000" />
       <workItem from="1716611284863" duration="1186000" />
       <workItem from="1716784091854" duration="7425000" />
+      <workItem from="1716860789973" duration="4638000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/resources/views/site/sections/service.blade.php</url>
+          <line>22</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

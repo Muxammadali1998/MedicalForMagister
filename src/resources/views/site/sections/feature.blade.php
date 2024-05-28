@@ -5,8 +5,8 @@
             <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.1s">
                 <div class="p-lg-5 ps-lg-0">
                     <p class="d-inline-block border rounded-pill text-light py-1 px-4">Features</p>
-                    <h1 class="text-white mb-4">Afzallik</h1>
-                    <p class="text-white mb-4 pb-2">GMC- har bir bemorga individual yondashadigan yuqori malakali mutaxassislarni o'z ichiga olgan ko'p tarmoqli tibbiyot markazi.</p>
+                    <h1 class="text-white mb-4">{{__('words.features')}}</h1>
+                    <p class="text-white mb-4 pb-2">{{__('words.featuresTitle')}}</p>
                     <div class="row g-4">
                         <div class="col-6">
                             <div class="d-flex align-items-center">
@@ -14,8 +14,8 @@
                                     <i class="fa fa-user-md text-primary"></i>
                                 </div>
                                 <div class="ms-4">
-                                    <p class="text-white mb-2">Tajribali</p>
-                                    <h5 class="text-white mb-0">Doktorlar</h5>
+                                    <p class="text-white mb-2">{{__('words.Tajribali')}}</p>
+                                    <h5 class="text-white mb-0">{{__('words.Doktorlar')}}</h5>
                                 </div>
                             </div>
                         </div>
@@ -25,8 +25,8 @@
                                     <i class="fa fa-check text-primary"></i>
                                 </div>
                                 <div class="ms-4">
-                                    <p class="text-white mb-2">Sifatli </p>
-                                    <h5 class="text-white mb-0">Xizmat</h5>
+                                    <p class="text-white mb-2">{{__('words.Sifatli')}} </p>
+                                    <h5 class="text-white mb-0">{{__('words.Xizmat')}}</h5>
                                 </div>
                             </div>
                         </div>
@@ -36,8 +36,8 @@
                                     <i class="fa fa-comment-medical text-primary"></i>
                                 </div>
                                 <div class="ms-4">
-                                    <p class="text-white mb-2">Ijobiy</p>
-                                    <h5 class="text-white mb-0">Tavsiya</h5>
+                                    <p class="text-white mb-2">{{__('words.Ijobiy')}}</p>
+                                    <h5 class="text-white mb-0">{{__('words.Tavsiya')}}</h5>
                                 </div>
                             </div>
                         </div>
@@ -47,8 +47,8 @@
                                     <i class="fa fa-headphones text-primary"></i>
                                 </div>
                                 <div class="ms-4">
-                                    <p class="text-white mb-2">24 Soat</p>
-                                    <h5 class="text-white mb-0">Qollab quvvatlash</h5>
+                                    <p class="text-white mb-2">{{__('words.fulltime')}}</p>
+                                    <h5 class="text-white mb-0">{{'words.support'}}</h5>
                                 </div>
                             </div>
                         </div>

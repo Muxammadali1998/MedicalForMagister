@@ -3,16 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Doctor;
+use App\Models\Job;
 
 class PagesController extends Controller
 {
     public function home()
     {
-        return view('site.pages.home');
+        $doctors = Doctor::all();
+        $jobs = Job::all();
+        return view('site.pages.home', compact('doctors', 'jobs')) ;
     }
     public function about()
     {
-        return view('site.pages.about');
+        $doctors = Doctor::all();
+        return view('site.pages.about', compact('doctors')) ;
     }
     public function contact()
     {
@@ -20,7 +25,8 @@ class PagesController extends Controller
     }
     public function service()
     {
-        return view('site.pages.service');
+        $jobs = Job::all();
+        return view('site.pages.service', compact('jobs')) ;
     }
     public function appointment()
     {
@@ -28,7 +34,8 @@ class PagesController extends Controller
     }
     public function doctor()
     {
-        return view('site.pages.doctor');
+        $doctors = Doctor::all();
+        return view('site.pages.doctor', compact('doctors')) ;
     }
     public function feature()
     {
